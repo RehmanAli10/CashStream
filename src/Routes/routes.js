@@ -1,4 +1,4 @@
-import { loginPage, signupPage } from "../pages/signupPage";
+import { loginPage, signupPage } from "../pages/pages";
 
 export const routes = {
   "/": `<h1>Home Page</h1>`,

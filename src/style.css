@@ -100,6 +100,18 @@ body {
   color: #1c1c1c; /* Change the text color of the anchor tag on hover */
 }
 
+.password-field-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  border-radius: 88px;
+  border: 1px solid var(--color-field-border);
+  background-color: #1c1c1c;
+  padding: 1.3rem;
+  width: 20%;
+}
+
 /* content-section */
 
 .content-section {
@@ -143,8 +155,12 @@ body {
   border-radius: 88px;
   border: 1px solid var(--color-field-border);
   background-color: #1c1c1c;
-  padding: 1.2rem;
+  padding: 1.9rem;
   width: 20%;
+}
+
+.input-password-field {
+  all: unset;
 }
 
 /* FOOTER*/
@@ -220,4 +236,45 @@ hr {
 .footer-container-3 span {
   color: var(--color-secondary-text);
   font-size: 1.2rem;
+}
+
+.btn-signup-conatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  width: 30%;
+}
+
+.signup-btn,
+.login-btn {
+  all: unset;
+  padding: 1.2rem 1.6rem;
+  background-color: var(--color-primary);
+  border-radius: 63px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  width: 50%;
+}
+
+.login-btn {
+  background-color: #333333;
+}
+
+.btn-signup-conatiner:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.signup-btn {
+  text-decoration: none;
+  color: #262626;
+}
+
+.login-btn {
+  text-decoration: none;
+  color: #ffffff;
 }
