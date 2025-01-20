@@ -1,6 +1,4 @@
 import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
 import { loadPage } from "./loadPage";
 
 document.querySelector("#app").innerHTML = `
@@ -87,10 +85,30 @@ document.querySelector("#app").innerHTML = `
 `;
 
 const contentSection = document.querySelector(".content-section");
-const signupBtn = document.querySelector(".signup-btn");
-const loginBtn = document.querySelector(".login-btn");
+const signupBtn = document.querySelector(".signup-btn a");
+const loginBtn = document.querySelector(".login-btn a");
 
 const pathName = window.location.pathname;
+
+function attachButtonEventListeners() {
+  if (signupBtn) {
+    signupBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const pathName = "/signup";
+      history.pushState({}, "", pathName);
+      loadPage(contentSection, pathName);
+    });
+  }
+
+  if (loginBtn) {
+    loginBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const pathName = "/login";
+      history.pushState({}, "", pathName);
+      loadPage(contentSection, pathName);
+    });
+  }
+}
 signupBtn.addEventListener("click", function (e) {
   e.preventDefault();
   const pathName = "/signup";
@@ -108,3 +126,5 @@ loginBtn.addEventListener("click", function (e) {
 console.log("pathName", pathName);
 
 loadPage(contentSection, pathName);
+
+attachButtonEventListeners();
